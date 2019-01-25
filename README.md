@@ -1,7 +1,6 @@
 # μKal
 The Micro Kalman Filter Library
 
-<<<<<<< HEAD
 A library for Kalman filtering, state estimation, and sensor fusion on memory constrained microncontrollers and embedded systems. The library is built on top of [μLAPack](https://www.github.com/SargisYonan/ulapack), a micro linear algebra package optimized for memory constrained systems, and can run on any target that C can be compiled for.
 
 μKal is a full discrete-time Kalman Filtering library. The library can filter linear, and non-linear, systems via an Extended Kalman Filter (EKF) or second-order filter (SOF).
