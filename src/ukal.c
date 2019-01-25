@@ -8,8 +8,13 @@
 
 #include "ukal.h"
 
-/*
- * Return uninitialized object error if the object is NULL.
+/**
+ * @macro error_if_uninit
+ * Helper macro for returning uninitialized object error.
+ *
+ * @param f A pointer to a filter or matrix object.
+ *
+ * @return Return uninitialized object error if the object is NULL.
  */
 #define error_if_uninit(f)  do { \
                                 if (!(f)) { \
@@ -19,8 +24,13 @@
                                 } \
                             } while(1)
 
-/*
- * Returns the error code passed in if the value passed in is not a success.
+/**
+ * @macro ret_iferr
+ * Helper macro for returning error code if the code is not a success.
+ *
+ * @param err An error code.
+ *
+ * @return The error code passed in if the value passed in is not a success.
  */
 #define ret_iferr( err )  do { \
                             if ((FilterError_t)(err) != filter_success) { \
@@ -167,7 +177,7 @@ FilterError_t ukal_filter_create(Filter_t * const filter,
      * Set the transpose of the internal state propagation matrix to the
      * transpose of the given matrix.
      */
-    ret_iferr( ukal_set_prop(filter, Phi) );
+    ret_iferr( ukal_set_phi(filter, Phi) );
 
     /*
      * Set the internal state propagation matrix to the given initial state.
@@ -201,6 +211,17 @@ FilterError_t ukal_filter_create(Filter_t * const filter,
     return filter_success;
 }
 
+/**
+ * @name ukal_set_fx
+ * Set the value of f(x), the nonlinear observation dynamics matrix.
+ *
+ * @note Only call when a nonlinear filter type is specified.
+ *
+ * @param[in/out] filter The filter object to set f(x) to.
+ * @param[in] fx The f(x) matrix.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_fx(Filter_t * const filter,
                           const Matrix_t * const fx) {
     error_if_uninit(filter);
@@ -230,6 +251,18 @@ FilterError_t ukal_set_fx(Filter_t * const filter,
     return filter_success; 
 }
 
+
+/**
+ * @name ukal_set_hx
+ * Set the value of h(x), the nonlinear observation dynamics matrix.
+ *
+ * @note Only call when a nonlinear filter type is specified.
+ *
+ * @param[in/out] filter The filter object to set h(x) to.
+ * @param[in] hx The h(x) matrix.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_hx(Filter_t * const filter,
                           const Matrix_t * const hx) {
     error_if_uninit(filter);
@@ -341,7 +374,7 @@ FilterError_t ukal_set_process_noise(Filter_t * const filter,
      * Calculate and internally store the constant term:
      * gamma * Q * gamma^T.
      */
-    ret_iferr( ulapack_product(&gammaQ, &gammaT, &filter->gammaQgammaT));
+    ret_iferr( ulapack_product(&gammaQ, &gammaT, &filter->gammaQgammaT) );
 
     return filter_success;
 }
@@ -520,6 +553,17 @@ FilterError_t ukal_model_predict(Filter_t * const filter) {
     return filter_success;
 }
 
+/**
+ * @name _ukal_update_kalman_gain
+ * A static private helper function for updating the internal gain matrix.
+ *
+ * @note The filter object should have the most up to date predicted covariance
+ *       matrix, P(-), at the point of calling this function.
+ *
+ * @param[in/out] filter The filter object to update the gain matrix.
+ *
+ * @return Filter status code.
+ */
 static FilterError_t _ukal_update_kalman_gain(Filter_t * const filter) {
     /*
      * Declare temporary variables for Kalman gain calculation.
@@ -562,6 +606,17 @@ static FilterError_t _ukal_update_kalman_gain(Filter_t * const filter) {
     return filter_success;
 }
 
+/**
+ * @name _ukal_update_state_vector
+ * A static private helper function for updating the internal state vector.
+ *
+ * @note The filter object should have the most up to date Kalman gain matrix.
+ *
+ * @param[in/out] filter The filter object to update the state vector within.
+ * @param[in/out] y The most up to date measurement vector.
+ *
+ * @return Filter status code.
+ */
 static FilterError_t _ukal_update_state_vector(Filter_t * const filter,
                                                const Matrix_t * const y) {
     /*
@@ -580,7 +635,7 @@ static FilterError_t _ukal_update_state_vector(Filter_t * const filter,
      * It is assumed that the gain matrix is known at this point.
      */
     ret_iferr( ulapack_init(&Kinn, filter->n_states, 1) );
-    ret_iferr( ulapack_product(&filter->K, &filter->innovation, &Kinn));
+    ret_iferr( ulapack_product(&filter->K, &filter->innovation, &Kinn) );
 
     /*
      * Add the predicted state vector to the weighted innovation.
@@ -590,6 +645,16 @@ static FilterError_t _ukal_update_state_vector(Filter_t * const filter,
     return filter_success;
 }
 
+/**
+ * @name _ukal_update_cov
+ * A static private helper function for updating the internal covariance matrix.
+ *
+ * @note The filter object should have the most up to date Kalman gain matrix.
+ *
+ * @param[in/out] filter The filter object to update the state vector within.
+ *
+ * @return Filter status code.
+ */
 static FilterError_t _ukal_update_cov(Filter_t * const filter) {
     /*
      * Temporary variable for K*H and (I - KH) * P.

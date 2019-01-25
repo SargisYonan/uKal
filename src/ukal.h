@@ -61,7 +61,7 @@
  *             h_{k} can be set via its set function;
  *
  *       v_{k} is the zero mean sensor noise vector.
- *             Note: R_{k} = E[v_{k}*v{k}^T].
+ *             Note: R_{k} = E[v_{k}*v_{k}^T].
  *
  * @note For N states in the state vector, and M observations in the measurement 
  *       vector:
@@ -88,7 +88,7 @@
  * @note n_measurements must be less than or greater than 
  *       UKAL_MAX_MEASUREMENT_VECTOR_SIZE.
  *
- * @param[in/out] The filter to initialize, and set up.
+ * @param[out] filter The filter to initialize, and set up.
  * @param type The filter type: linear or ekf.
  * @param n_state The number of states in the state vector, x.
  * @param n_measurements The number of observation states in the observation
@@ -247,22 +247,105 @@ FilterError_t ukal_get_state(const Filter_t * const filter,
  * will be overwritten.                      *
  *********************************************/
 
-FilterError_t ukal_set_prop(Filter_t * const filter, 
-                            const Matrix_t * const Phi);
+/**
+ * @name ukal_set_phi
+ * Set the filter's state propagation matrix to a passed in value.
+ *
+ * @note The dimensions of the passed in value must match that
+ *       of the expected dimensions in the filter previously
+ *       created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] Phi The state propagation matrix to overwrite the
+ *            internal matrix with.
+ *
+ * @return Filter status code.
+ */
+FilterError_t ukal_set_phi(Filter_t * const filter, 
+                           const Matrix_t * const Phi);
 
+/**
+ * @name ukal_set_state
+ * Set the filter's state vector to a passed in value.
+ *
+ * @note The dimensions of the passed in value must match that of the expected 
+ *       dimensions in the filter previously created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] x The state vector to overwrite the internal vector with.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_state(Filter_t * const filter, 
                              const Matrix_t * const x);
 
+/**
+ * @name ukal_set_process_noise
+ * Set the filter's process noise values.
+ *
+ * @note The dimensions of the passed in values must match those of the expected 
+ *       dimensions in the filter previously created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] gamma The state process noise matrix to overwrite the internal 
+ *            matrix with.
+ * @param[in] Q The state process noise covariance matrix to overwrite the
+ *            internal matrix with.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_process_noise(Filter_t * const filter, 
                                      const Matrix_t * const gamma,
                                      const Matrix_t * const Q);
 
+
+/**
+ * @name ukal_set_state_cov
+ * Set the filter's state covariance matrix to a passed in value.
+ *
+ * @note The dimensions of the passed in value must match that
+ *       of the expected dimensions in the filter previously
+ *       created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] P The state covariance matrix to overwrite the internal matrix 
+ *            with.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_state_cov(Filter_t * const filter, 
                                  const Matrix_t * const P);
 
+/**
+ * @name ukal_set_obs
+ * Set the filter's observation matrix to a passed in value.
+ *
+ * @note The dimensions of the passed in value must match that
+ *       of the expected dimensions in the filter previously
+ *       created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] H The observation matrix to overwrite the internal matrix with.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_obs(Filter_t * const filter, 
                            const Matrix_t * const H);
 
+/**
+ * @name ukal_set_obs_noise
+ * Set the filter's observation noise matrix to a passed in value.
+ *
+ * @note The dimensions of the passed in value must match that
+ *       of the expected dimensions in the filter previously
+ *       created.
+ *
+ * @param[out] filter The filter object to modify.
+ * @param[in] R The observation noise matrix to overwrite the internal matrix 
+ *            with.
+ *
+ * @return Filter status code.
+ */
 FilterError_t ukal_set_obs_noise(Filter_t * const filter, 
                                  const Matrix_t * const R);
 

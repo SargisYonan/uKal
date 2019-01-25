@@ -247,7 +247,7 @@ int main(void) {
         get_sensor_data(&y);
 
         get_state_jacobian(&Phi, &filter.x, dt);
-        ut_iserr(ukal_set_prop(&filter, &Phi), "Cannot set prop matrix.");
+        ut_iserr(ukal_set_phi(&filter, &Phi), "Cannot set prop matrix.");
 
         printf("Phi(-) = \n");
         ulapack_print(&filter.Phi, stdout);
