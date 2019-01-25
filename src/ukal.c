@@ -292,7 +292,7 @@ FilterError_t ukal_set_hx(Filter_t * const filter,
     return filter_success; 
 }
 
-FilterError_t ukal_set_prop(Filter_t * const filter, 
+FilterError_t ukal_set_phi(Filter_t * const filter, 
                             const Matrix_t * const Phi) {
     error_if_uninit(filter);
     error_if_uninit(Phi);
