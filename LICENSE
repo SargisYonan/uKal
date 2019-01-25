@@ -1,0 +1,261 @@
+                         μKal License v1.0
+                 Copyright (c) 2019 Sargis S Yonan
+                     Contact: sargis@yonan.org  
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+  1.  Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 11 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, unit testing code, instructions, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types, including but not limited to
+      medical devices, aircraft, robotic applications, home automation
+      equipment, calibration software, machine learning applications,
+      real-time control, feedback control, data processing, sensor
+      calibration, and state estimation.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License. The Definition
+      of Work will be used interchangeably with μKal in this License.
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual authorized to submit on behalf of the copyright 
+      owner. For the purposes of this definition, "submitted" means any form 
+      of electronic, verbal, or written communication sent to the Licensor 
+      or its representatives, including but not limited to communication on 
+      electronic mailing lists, source code control systems, and issue 
+      tracking systems that are managed by, or on behalf of, the Licensor 
+      for the purpose of discussing and improving the Work if and only if 
+      the copyright owner designates in writing "This is a Contribution to
+      the Work."
+
+      "Contributor" shall mean Licensor, copywriter owner and any individual, 
+      or Legal Entity on behalf of whom a Contribution has been received by 
+      Licensor, subsequently incorporated within the Work, and explicitly 
+      designated by the copyright owner in writing, stating verbatim, 
+      "This is a Contribution to the Work."
+
+      "Personal Use" shall mean the use of this Work for non-profitable
+      means, exercises, and personal education. Personal/Private Use will 
+      explicitly exclude the use of this Work for any commercial, corporate,
+      for-cost, and for-profit purpose, or the intentions to do so.
+      
+      "Private Use" will be defined identically to the definition for Personal 
+      Use.
+
+      "Free" shall refer to the absence of monetary compensation for the Work.
+      
+      "Developer" an individual who uses this Work or Source with the 
+      intention of making a commercially available product in any medium, with
+      or without modifications, to this Work and/or Derivative 
+      Work they create or help create.
+
+  2.  Grant of Copyright License. 
+      Sargis S Yonan is the copyright holder, and the Licensor of this Work. The 
+      Licensor of this Work must explicitly declare You to be a Contributor to 
+      this Work by the terms defined in the definition for Contribution and 
+      Contributor.
+
+  3.  Redistribution. 
+      You may only reproduce and distribute copies of the Work or Derivative 
+      Works in any medium, with or without modifications, and in Source or
+      Object form, provided that You meet the following conditions:
+
+      (a) You must cause any modified files to carry prominent notices
+          stating that You changed the files, and who the original authors
+          were. A copy of this License must be attached to the source code
+          if the source code is redistributed; and
+
+      (b) You must not redistribute the direct Work or Source form with 
+          a different License agreement. This License must be included in 
+          the code base of any redistribution unless otherwise specified in
+          a written agreement between You and the Licensor; and
+
+      (c) Subject to the terms and conditions of this License, the Licensor, can 
+          grant to You redistribution right if and only if a signed agreement 
+          (contract) between You and the Licensor, including at least, but not 
+          limited to the following terms and conditions:
+
+            (I)    A description of the Object form where the Works and/or 
+                   Derivative Works are used; and
+
+            (II)   How the Work and/or Derivative Works contribute to the use of 
+                   the final Object form; and
+
+            (III)  The estimated number of Object units sold, to-be sold, rented 
+                   out, distributed and, manufactured. Evidence supporting this 
+                   claim must also be included in the agreement; and
+
+            (IV)   The manufacturing cost of each Object form; and
+
+            (V)    The average selling price of each Object form in The United 
+                   States of America. If the object form is not sold in The 
+                   United States of America, the estimated average sell price in 
+                   USD will be included instead; and
+
+            (VI)   The regions of the world in which the Object form will be on 
+                   sale; and
+
+            (VII)  The largest expected sales country of the world in which the
+                   object form will be sold, and the average expected selling 
+                   price in that country converted to USD; and
+
+            (VIII) The agreed upon monetary compensation, and means of 
+                   compensation, to the Licensor for the use of Works and/or 
+                   Derivative Works. The payment must be made to the Licensor 
+                   only in US Dollar currency. The monetary payment will include
+                   any combination, and at least one, of the following possible 
+                   agreement conditions:
+
+                   (i)  A single payment, agreed upon by both You and the 
+                        Licensor, paid to the Licensor within 3 months 
+                        (120 days) with no more than four installations of
+                        payment over the course, where each installation 
+                        includes at least the total agreed upon payment in 
+                        USD divided by five (5); and/or
+
+                   (ii) An agreed upon royalty fee, where the Licensor will be
+                        compensated per instance of Works and/or Derivative 
+                        Works, including, but not limited to Object forms either 
+                        sold, rented out, manufactured, or distributed in any 
+                        way by any party. The agreement may also include an 
+                        agreed upon initial payment for the use of these Works 
+                        and/or Derivative Works, if a Developer License was not 
+                        previously granted.
+
+                        The agreement may also include a predetermined milestone 
+                        royalty percentage increase, where at each predetermined 
+                        milestone of units either distributed, sold, rented out, 
+                        or manufactured exceeds a predetermined quantity. 
+                   
+                        The time period at which each royalty fee will be given 
+                        to the Licensor will be included in the agreement.
+                  
+                        A minimum payment threshold may also be set if a 
+                        predetermined minimum royalty fee could not be met for a 
+                        predetermined period of time.
+
+  5.  Developer License.
+      Subject to the terms and conditions of this License, a Developer License
+      can be granted on an individual basis. The purpose of the Developer 
+      License is to allow the use of this Work in a development environment to
+      decide weather this Work can assist in the creation of a commercial 
+      product. A Developer using the Developer License may use this Work and
+      Source form for development purposes within a corporation, company, or
+      individually with the intent of redistributing an Object form or 
+      Derivative Works.
+
+      The Developer License is a permission granted to a Developer to use the 
+      Source or Work in a development environment, and not for commercial use by
+      any medium. A redistribution agreement must be made in order to grant the
+      ability to redistribute the Work, Derivative Work, or Object form. The
+      Developer may not make a profit by redistributing this Work, Derivative
+      Work, or Object form in any way, without a redistribution agreement.
+
+      The license does however allow a Developer to develop Derivative Work with 
+      the intention, to commercially produce Derivative Work and Object forms 
+      of this Work in any medium. 
+
+      A single Developer License may only be granted on a single individual 
+      basis for a single payment to the Licensor agreed upon by both You and the 
+      Licensor.
+
+  6.  Free License.
+      Subject to the terms and conditions of this License, a Free License is
+      granted to an individual using this Work for the creation of Object forms
+      and Derivative Works for Personal and Private Use. A Developer may use the
+      Free License within a 24 hour grace period before deciding to purchase a 
+      Developer License. Besides the grace period, under no circumstances may a
+      corporation, company, academic institution, an individual developing a
+      product, or an affiliate with the intention of redistributing on behalf of
+      a corporation, company, academic institution use the Free License. A 
+      Developer License must be granted for such cases. The Free License will 
+      only grant the use of this Work for academic purposes, including but not
+      limited to research and publication (only by citing the creator of the 
+      Source), and self-learning purposes. The Free License is not allowed for 
+      any product development purposes.
+      
+      This License shall be included via text, or linked to, anytime the Work 
+      or Derivitive Work is published publicly, including but not limited to 
+      publishing on the world wide web.
+
+  7.  Submission of Contributions. 
+      Subject to the terms and conditions of this License, a Contributor may
+      have rights to monetary compensation subject to a contractual agreement 
+      between the Licensor and Contributor decided upon, and signed by both 
+      parties, within no more than one week (7 days) upon Contribution to 
+      this Work. A Contributor will not be granted the Copyright License, unless
+      explicitly defined in a mutually signed agreement (contract) between both
+      the Licensor and Contributor.
+
+  8.  Trademarks. 
+      This License does not grant permission to use the trade names, trademarks, 
+      service marks, or product names of the Licensor, except as required for 
+      reasonable and customary use in describing the origin of the Work and 
+      reproducing the content of the NOTICE file.
+
+  9.  Disclaimer of Warranty.
+      Unless required by applicable law or agreed to in writing, Licensor 
+      provides the Work (and each Contributor provides its Contributions) on an 
+      "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+      express or implied, including, without limitation, any warranties or 
+      conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any risks 
+      associated with Your exercise of permissions under this License.
+
+  10. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+  11. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

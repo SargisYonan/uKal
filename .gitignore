@@ -1,0 +1,11 @@
+# MacOS Ignore
+*.DS_Store
+
+# C
+*.o
+
+# Valgrind symbols
+*.dSYM
+
+# Test Executables
+ukal_tests
