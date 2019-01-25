@@ -1,0 +1,12 @@
+# MacOS Ignore
+*.DS_Store
+
+# C
+*.o
+
+# Valgrind symbols
+*.dSYM
+
+# Test Executables
+ulapack_test_static
+ulapack_test_dynamic
