@@ -1,1 +1,1 @@
-An explanation of the Extended Kalman Filter (EKF) is available in [ekf_example.ipynb](ekf_example.ipynb). The details of setting up your own filter, and using uKal are in the document.
+[EKF uKal Tutorial](http://www.yonan.org/ukal/examples/ekf_example.html): An explanation of the Kalman Filter with the Extended Kalman Filter (EKF) using uKal.
