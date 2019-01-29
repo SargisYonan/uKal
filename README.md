@@ -49,7 +49,7 @@ The following error codes can be returned from the library functions. See the in
 μKal is free to use for personal and/or educational use without profit and for development purposes in your project(s) to verify if μKal is right for you. 
 
 For developers and for derivative commercial use (with redistribution rights):
-Fill out the [licensing form](https://goo.gl/forms/8QpSDgC3JthAGoTG2), and I will promptly reply with a response.
+Fill out the [licensing inquiry form](https://goo.gl/forms/8QpSDgC3JthAGoTG2), and I will promptly reply with a response and proposed license agreement.
 
 Refer to the [LICENSE](LICENSE) document for licensing details.
 
