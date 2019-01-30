@@ -2,6 +2,8 @@
 The Micro Kalman Filter Library
 
 [![Build Status](https://travis-ci.com/SargisYonan/uKal.svg?branch=master)](https://travis-ci.com/SargisYonan/uKal)
+[![DOI](https://zenodo.org/badge/167520013.svg)](https://zenodo.org/badge/latestdoi/167520013)
+
 
 A library for Kalman filtering, state estimation, and sensor fusion on memory constrained microncontrollers and embedded systems. The library is built on top of [μLAPack](https://www.github.com/SargisYonan/ulapack), a micro linear algebra package optimized for memory constrained systems, and can run on any target that C can be compiled for.
 
