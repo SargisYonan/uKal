@@ -1,0 +1,12 @@
+language: c
+sudo: false
+
+before_script: 
+  - cd tests/
+  - make
+
+script:
+  - ./ukal_tests
+
+after_script:
+  - make clean
