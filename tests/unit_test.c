@@ -9,7 +9,7 @@
 /*
  * Total unit test error counter.
  */
-static uint64_t ut_error_counter = 0;
+static unsigned int ut_error_counter = 0;
 
 #define INFO(msg) \
     fprintf(stderr, "Error: %s:%d: ", __FILE__, __LINE__); \
@@ -320,7 +320,7 @@ int main(void) {
     ut_iserr (ulapack_is_equal(&filter.P, &P_final_exp, &isequal), "Cannot compare expected and cov mats.");
     ut_iserr ( isequal, "Expected and actual cov matrix do not match." );
         
-    printf("Errors: %llu\n", ut_error_counter);
+    printf("Errors: %u\n", ut_error_counter);
 
     if (ut_error_counter > 0) {
         return -1 * ut_error_counter;

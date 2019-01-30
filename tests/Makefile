@@ -1,4 +1,4 @@
-cc=cc
+cc=gcc-6
 cc_options=-Wall -Wextra -Werror -std=c99 -Os
 
 ukal_src_dir=../src
