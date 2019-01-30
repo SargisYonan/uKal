@@ -52,7 +52,7 @@ And you know your covariance matrices:
 
 Then you can immediately begin filtering after creating your filter, and initializing the matrix/vector values:
 ```C
-ukal_filter_create(&filter, my_filter, n_states, n_measurements,
+ukal_filter_create(&my_filter, <linear, ekf, or sof>, n_states, n_measurements,
                    &Phi, &gamma, &x, &Q,
                    &P,
                    &H, &R);

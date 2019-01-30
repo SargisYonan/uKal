@@ -84,8 +84,8 @@
  *       accordingly, but their values can be set via the set functions in this
  *       library.
  *
- * @note n_states must be less than or greater than UKAL_MAX_STATE_VECTOR_SIZE.
- * @note n_measurements must be less than or greater than 
+ * @note n_states must be less than or equal to UKAL_MAX_STATE_VECTOR_SIZE.
+ * @note n_measurements must be less than or equal to 
  *       UKAL_MAX_MEASUREMENT_VECTOR_SIZE.
  *
  * @param[out] filter The filter to initialize, and set up.
