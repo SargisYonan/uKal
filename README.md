@@ -23,19 +23,21 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 
 If you have model that looks like this:
 
-<img src="https://latex.codecogs.com/gif.latex?\vec{x}_{k+1} = \Phi_k \vec{x}_{k} + \Gamma_k \vec{w}_k" /> 
+![equation](https://latex.codecogs.com/gif.latex?\vec{x}_{k&plus;1}&space;=&space;\Phi_k&space;\vec{x}_{k}&space;&plus;&space;\Gamma_k&space;\vec{w}_k)
 or this:
-<img src="https://latex.codecogs.com/gif.latex?\vec{x}_{k+1} = \vec{f}(\vec{x}_{k}, \vec{w}_k)" /> 
+
+![equation](https://latex.codecogs.com/gif.latex?\vec{x}_{k&plus;1}&space;=&space;\vec{f}(\vec{x}_{k},&space;\vec{w}_k))
+
 
 And you have a measurement model that looks like this:
-<img src="https://latex.codecogs.com/gif.latex?\vec{y}_k = H_k \vec{x}_k + \vec{\nu}_k" /> 
+![equation](https://latex.codecogs.com/gif.latex?\vec{y}_k&space;=&space;H_k&space;\vec{x}_k&space;&plus;&space;\vec{\nu}_k)
+
 or this:
-<img src="https://latex.codecogs.com/gif.latex?\vec{y}_k = \vec{h}_k(\vec{x}_k) + \vec{\nu}_k" /> 
+![equation](https://latex.codecogs.com/gif.latex?\vec{y}_k&space;=&space;\vec{h}_k(\vec{x}_k)&space;&plus;&space;\vec{\nu}_k)
 
 And you know your covariance matrices: 
 
-<img src="https://latex.codecogs.com/gif.latex?P,\ Q,\ R" /> 
-
+![equation](https://latex.codecogs.com/gif.latex?P,\&space;Q,\&space;R)
 
 Then you can immediately begin filtering after creating your filter, and initializing the matrix/vector values:
 ```C
