@@ -2,7 +2,10 @@ language: c
 sudo: false
 
 before_script: 
+  - cd src/
+  - git submodule update
   - git submodule update --init --recursive
+  - cd ..
   - cd tests/
   - make
 
