@@ -21,8 +21,50 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 	  and observation dynamics
 * Safe getters and setters for the state vector, covariance matrix, and more!
 
-### Kalman Filter Example Using an EKF
-See [an example using μKal for an EKF](http://www.yonan.org/ukal/examples/ekf_example.html) to learn more about modeling a system, and using μKal to filter noisy sensor measurements.
+If you have model that looks like this:
+
+$$ x_{k+1} = \Phi_k x_{k} + \Gamma_k w_k $$
+
+or this:
+
+$$ x_{k+1} = f(x_{k}, w_k) $$ 
+
+And you have a measurement model that looks like this:
+
+$$ y_k = H_k x_k + \nu_k $$
+
+or this:
+
+$$ y_k = h_k(x_k) + \nu_k $$
+
+And you know your covariance matrices: $$P$$, $$Q$$, and $$R$$.
+
+Then you can immediately begin filtering after creating your filter, and initializing the matrix/vector values:
+```C
+ukal_filter_create(&filter, my_filter, n_states, n_measurements,
+                   &Phi, &gamma, &x, &Q,
+                   &P,
+                   &H, &R);
+```
+
+Don't have a system that looks like that? Want to learn how to make your system fit that form?
+See [an example using μKal for an EKF](http://www.yonan.org/ukal/examples/ekf_example.html) to learn more about modeling a system, and using μKal to filter noisy sensor measurements for linear and nonlinear systems.
+
+Want to predict the current state vector and covariance matrix value?
+```C
+ukal_model_predict(&my_filter);
+```
+
+Got a sensor measurement, and want to update your estimate of the state and the covariance matrix?
+```C
+ukal_update(&my_filter, &y);
+```
+
+## Building
+For a build example, see [tests/Makefile](tests/Makefile) for an example of how to compile the project with proper option settings and linking.
+
+### Building Options
+Some basic building options are configured in the project, but any [μLAPack option](src/uLAPack/src/ulapack_options.h) can be configured as desired.
 
 #### Static Memory Allocation
 The library is implemented on top of [μLAPack](https://www.github.com/SargisYonan/ulapack), and is configured to run only with statically allocated memory. This library is safe and ready to use on an embedded system where dynamic memory allocation is not feasible.
