@@ -22,22 +22,25 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 * Safe getters and setters for the state vector, covariance matrix, and more!
 
 If you have model that looks like this:
-
 <p align="center">
   <img width="250" height="25" src="https://latex.codecogs.com/gif.latex?\dpi{300}&space;\vec{x}_{k&plus;1}&space;=&space;\Phi_k&space;\vec{x}_{k}&space;&plus;&space;\Gamma_k&space;\vec{w}_k">
 </p>
 
 or this:
-
-![equation](https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{x}_{k&plus;1}&space;=&space;\vec{f}(\vec{x}_{k},&space;\vec{w}_k))
+<p align="center">
+  <img width="250" height="25" src="https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{x}_{k&plus;1}&space;=&space;\vec{f}(\vec{x}_{k},&space;\vec{w}_k)">
+</p>
 
 
 And you have a measurement model that looks like this:
-![equation](https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{y}_k&space;=&space;H_k&space;\vec{x}_k&space;&plus;&space;\vec{\nu}_k)
+<p align="center">
+  <img width="250" height="25" src="https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{y}_k&space;=&space;H_k&space;\vec{x}_k&space;&plus;&space;\vec{\nu}_k">
+</p>
 
 or this:
-
-![equation](https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{y}_k&space;=&space;\vec{h}_k(\vec{x}_k)&space;&plus;&space;\vec{\nu}_k)
+<p align="center">
+  <img width="250" height="25" src="https://latex.codecogs.com/gif.latex?\dpi{300}&space;\large&space;\vec{y}_k&space;=&space;\vec{h}_k(\vec{x}_k)&space;&plus;&space;\vec{\nu}_k">
+</p>
 
 And you know your covariance matrices: 
 
