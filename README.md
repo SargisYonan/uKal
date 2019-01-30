@@ -56,9 +56,7 @@ Fill out the [licensing inquiry form](https://goo.gl/forms/8QpSDgC3JthAGoTG2), a
 Refer to the [LICENSE](LICENSE) document for licensing details.
 
 # TODO
-* Clean up the EKF example.
-* Push all unit tests after documenting.
-* Set up CI build.
-* Add examples to README.
+* Make the README look prettier
+* Add examples to README file itself and not just the examples directory.
 
 Have a suggestion for a new feature/function? File an issue in this repository with your requests.
