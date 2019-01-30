@@ -23,21 +23,19 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 
 If you have model that looks like this:
 
-$$ x_{k+1} = \Phi_k x_{k} + \Gamma_k w_k $$
-
+<img src="https://latex.codecogs.com/gif.latex?\vec{x}_{k+1} = \Phi_k \vec{x}_{k} + \Gamma_k \vec{w}_k" /> 
 or this:
-
-$$ x_{k+1} = f(x_{k}, w_k) $$ 
+<img src="https://latex.codecogs.com/gif.latex?\vec{x}_{k+1} = \vec{f}(\vec{x}_{k}, \vec{w}_k)" /> 
 
 And you have a measurement model that looks like this:
-
-$$ y_k = H_k x_k + \nu_k $$
-
+<img src="https://latex.codecogs.com/gif.latex?\vec{y}_k = H_k \vec{x}_k + \vec{\nu}_k" /> 
 or this:
+<img src="https://latex.codecogs.com/gif.latex?\vec{y}_k = \vec{h}_k(\vec{x}_k) + \vec{\nu}_k" /> 
 
-$$ y_k = h_k(x_k) + \nu_k $$
+And you know your covariance matrices: 
 
-And you know your covariance matrices: $$P$$, $$Q$$, and $$R$$.
+<img src="https://latex.codecogs.com/gif.latex?P,\ Q,\ R" /> 
+
 
 Then you can immediately begin filtering after creating your filter, and initializing the matrix/vector values:
 ```C
