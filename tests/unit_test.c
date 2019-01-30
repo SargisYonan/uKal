@@ -326,5 +326,5 @@ int main(void) {
         return -1 * ut_error_counter;
     }
 
-    return 1;
+    return 0;
 }
