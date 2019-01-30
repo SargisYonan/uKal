@@ -10,7 +10,7 @@ ulapack_options=-DULAPACK_MATRIX_ENTRY_TYPE=double -DULAPACK_INDEX_TYPE=uint64_t
 			 -DULAPACK_MAX_MATRIX_N_ROWS=5 -DULAPACK_MAX_MATRIX_N_COLS=5 \
 			 -DULAPACK_INITIALIZE_MEMORY=1 -DULAPACK_INVERSE_VIA_LU=1 -DULAPACK_MINIMUM_THRESHOLD_TOLERANCE=.0001
 
-ulapack_src_dir=$(ukal_src_dir)/ulapack/src
+ulapack_src_dir=$(ukal_src_dir)/uLAPack/src
 
 exec=ukal_tests
 
@@ -23,9 +23,6 @@ ukal.o: ulapack.o $(ukal_src_dir)/ukal.c $(ukal_src_dir)/ukal.c $(ukal_src_dir)/
 	$(cc) $(cc_options) -I$(ukal_src_dir) -I$(ulapack_src_dir) -c $(ukal_src_dir)/ukal.c $(ukal_options) $(ulapack_options) -o ukal.o
 
 ulapack.o:
-	ls ..
-	ls $(ukal_src_dir)
-	ls $(ulapack_src_dir)
 	$(cc) $(cc_options) -I$(ulapack_src_dir) -c $(ulapack_src_dir)/ulapack.c  $(ulapack_options) -o ulapack.o
 
 clean:
