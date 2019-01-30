@@ -277,6 +277,54 @@ int main(void) {
         ulapack_print(&filter.x, stdout);
     }
 
+    Matrix_t x_final_exp;
+    ulapack_init(&x_final_exp, n_states, 1);
+    /*
+     * Parallel filter ran in MATLAB.
+     */
+    ulapack_edit_entry(&x_final_exp, 0, 0, 32.950418372726212);
+    ulapack_edit_entry(&x_final_exp, 1, 0, 29.514796929099575);
+    ulapack_edit_entry(&x_final_exp, 2, 0, 5.956417779623743);
+    ulapack_edit_entry(&x_final_exp, 3, 0, 0.071855231860152);
+
+    MatrixError_t isequal;
+
+    ut_iserr (ulapack_is_equal(&filter.x, &x_final_exp, &isequal), "Cannot compare expected and actual states.");
+    ut_iserr ( isequal, "Expected and actual state vectors do not match." );
+
+    Matrix_t P_final_exp;
+    ulapack_init(&P_final_exp, n_states, n_states);
+    /*
+     * Parallel filter ran in MATLAB.
+     */
+    ulapack_edit_entry(&P_final_exp, 0, 0, 0.517846656052970);
+    ulapack_edit_entry(&P_final_exp, 1, 0, 0.005544392784906);
+    ulapack_edit_entry(&P_final_exp, 2, 0, 1.033243899767675);
+    ulapack_edit_entry(&P_final_exp, 3, 0, -0.012176599795471);
+
+    ulapack_edit_entry(&P_final_exp, 0, 1, 0.005544392784906);
+    ulapack_edit_entry(&P_final_exp, 1, 1, 0.457839474152853);
+    ulapack_edit_entry(&P_final_exp, 2, 1, 0.101416749649471);
+    ulapack_edit_entry(&P_final_exp, 3, 1, 0.122649098758324);
+
+    ulapack_edit_entry(&P_final_exp, 0, 2,  1.033243899767674);
+    ulapack_edit_entry(&P_final_exp, 1, 2,  0.101416749649471);
+    ulapack_edit_entry(&P_final_exp, 2, 2, 12.491559373945359);
+    ulapack_edit_entry(&P_final_exp, 3, 2,  0.004225656804946);
+
+    ulapack_edit_entry(&P_final_exp, 0, 3, -0.012176599795471);
+    ulapack_edit_entry(&P_final_exp, 1, 3,  0.122649098758324);
+    ulapack_edit_entry(&P_final_exp, 2, 3,  0.004225656804946);
+    ulapack_edit_entry(&P_final_exp, 3, 3,  0.151279207167239);
+
+    ut_iserr (ulapack_is_equal(&filter.P, &P_final_exp, &isequal), "Cannot compare expected and cov mats.");
+    ut_iserr ( isequal, "Expected and actual cov matrix do not match." );
+        
     printf("Errors: %llu\n", ut_error_counter);
+
+    if (ut_error_counter > 0) {
+        return -1 * ut_error_counter;
+    }
+
     return 1;
 }
