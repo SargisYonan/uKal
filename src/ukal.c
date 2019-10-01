@@ -126,7 +126,7 @@ FilterError_t ukal_filter_create(Filter_t * const filter,
     if (gamma->n_rows != n_states) {
         return filter_invalid_argument;
     }
-    ret_iferr( ulapack_init(&filter->gammaQgammaT, gamma->n_cols, gamma->n_cols) );
+    ret_iferr( ulapack_init(&filter->gammaQgammaT, gamma->n_rows, gamma->n_rows) );
 
     /*
      * Initialize the covariance matrix to N x N.
