@@ -46,7 +46,7 @@ or this:
 
 And you know your covariance matrices: 
 <p align="center">
-  <img src="https://microsoft.codecogs.com/png.latex?\dpi{150}&space;P,\&space;Q,\&space;R">
+  <img src="https://render.githubusercontent.com/render/math?math=P,Q,R">
 </p>
 
 
