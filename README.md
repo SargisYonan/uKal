@@ -26,7 +26,7 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 If you have model that looks like this:
 <!--\vec{x}_{k+1} = \Phi_k \vec{x}_{k} + \Gamma_k \vec{w}_k-->
 <p align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=\vec{x}_{k+1}%20=%20\Phi_k%20\vec{x}_{k}%20%2B%20\Gamma_k%20\vec{w}_k">
+  <img src="https://render.githubusercontent.com/render/math?math=\vec{x}_{k%2B1}%20=%20\Phi_k%20\vec{x}_{k}%20%2B%20\Gamma_k%20\vec{w}_k">
 </p>
 
 or this:
