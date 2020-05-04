@@ -25,28 +25,28 @@ All μKal functions are "safe" in that the matrix/vector operations are checked 
 
 If you have model that looks like this:
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\dpi{150}&space;\vec{x}_{k&plus;1}&space;=&space;\Phi_k&space;\vec{x}_{k}&space;&plus;&space;\Gamma_k&space;\vec{w}_k">
+  <img src="https://microsoft.codecogs.com/svg.latex?\vec{x}_{k&plus;1}&space;=&space;\Phi_k&space;\vec{x}_{k}&space;&plus;&space;\Gamma_k&space;\vec{w}_k">
 </p>
 
 or this:
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\dpi{150}&space;\vec{x}_{k&plus;1}&space;=&space;\vec{f}(\vec{x}_{k},&space;\vec{w}_k)">
+  <img src="https://microsoft.codecogs.com/svg.latex?\vec{f}(\vec{x}_{k},&space;\vec{w}_k)">
 </p>
 
 
 And you have a measurement model that looks like this:
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\dpi{150}&space;\vec{y}_k&space;=&space;H_k&space;\vec{x}_k&space;&plus;&space;\vec{\nu}_k">
+  <img src="https://microsoft.codecogs.com/svg.latex?\vec{y}_k&space;=&space;H_k&space;\vec{x}_k&space;&plus;&space;\vec{\nu}_k">
 </p>
 
 or this:
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\dpi{150}&space;\vec{y}_k&space;=&space;\vec{h}_k(\vec{x}_k)&space;&plus;&space;\vec{\nu}_k">
+  <img src="https://microsoft.codecogs.com/svg.latex?\vec{y}_k&space;=&space;\vec{h}_k(\vec{x}_k)&space;&plus;&space;\vec{\nu}_k">
 </p>
 
 And you know your covariance matrices: 
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\dpi{150}&space;P,\&space;Q,\&space;R">
+  <img src="https://microsoft.codecogs.com/svg.latex?&space;P,\&space;Q,\&space;R">
 </p>
 
 
